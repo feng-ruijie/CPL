@@ -1,0 +1,6 @@
+在文件夹里启动powershall
+git add . 
+git commit -m "随便"
+git push 
+git remote -v 
+git push 网址 main
