@@ -1,4 +1,4 @@
-在文件夹里启动powershall
+在文件夹里启动powershell
 git add . 
 git commit -m "随便"
 git push 
