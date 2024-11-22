@@ -11,11 +11,10 @@ void work(int *b){
 }
 int main(){
   /* int a = 5 , *b;
-    *b = a;
     printf("%d %d",b,*b);*/
-  /*  int a = 123 , *b = &a;
+    int a = 123 , *b = &a;
     *b = 456;
-    printf("%d\n",*b);*/
+    printf("%d %d\n",*b,a);
   /*  tree t = {1,2,3} , tr = {6,7,8};
     tree *p = &t;
     (*p) = tr;
