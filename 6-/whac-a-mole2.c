@@ -13,15 +13,14 @@ int min(int x,int y){
 }
 void rotate(){
     w = max(n,m);
-    int k = w+1; //È·¶¨Ò»¸ö¡°¶¥µã¡°
+    int k = w+1; //ç¡®å®šä¸€ä¸ªâ€œé¡¶ç‚¹â€œ
     b[1][k] = a[1][1];
     xx[1][k] = 1, yy[1][k] = 1; 
-    //Ìî³äÉÏ°ë²¿·Ö
+    //å¡«å……ä¸ŠåŠéƒ¨åˆ†
     for(int i=2;i<=w;i++){
-        int start = k-(i-1),x=1,y=i; //ÕâÒ»ĞĞÒªÌîi¸öÊı
+        int start = k-(i-1),x=1,y=i; //è¿™ä¸€è¡Œè¦å¡«iä¸ªæ•°
         for(int j=start;j;j+=2){
             b[i][j] = a[x][y];
-          //  printf("%d %d %d %d\n",i,j,x,y);
             if(x <= n && y <= m && x >= 1 && y >= 1){
                 xx[i][j] = x , yy[i][j] = y;
             }
@@ -29,9 +28,9 @@ void rotate(){
             if(y <= 0) break;
         }
     }
-    //Ìî³äÏÂ°ë²¿·Ö
+    //å¡«å……ä¸‹åŠéƒ¨åˆ†
     for(int i=w-1;i>=1;i--){
-        int start = k-(i-1),x=w+1-i,y=w; //ÕâÒ»ĞĞÒªÌîi¸öÊı
+        int start = k-(i-1),x=w+1-i,y=w; //è¿™ä¸€è¡Œè¦å¡«iä¸ªæ•°
         for(int j=start;j;j+=2){
             b[2*w-i][j] = a[x][y];
             if(x <= n && y <= m && x >= 1 && y >= 1){
@@ -41,16 +40,10 @@ void rotate(){
             if(y <= 0) break;
         }
     }
-   /* for(int i=1;i<=2*w+1;i++){
-    	for(int j=1;j<=2*w+1;j++){
-    		printf("%d ",b[i][j]);
-		} 
-		printf("\n");
-	}*/
 }
 signed main(){
     scanf("%lld %lld %lld",&n,&m,&k);
-    //ÍØ³äÍ¼
+    //æ‹“å……å›¾
     for(int i=1;i<=n;i++){
         for(int j=1;j<=m;j++){
             scanf("%lld",&a[i][j]);
@@ -85,9 +78,3 @@ signed main(){
         printf("%lld %lld\n",ans[i][0],ans[i][1]);
     }
 }
-/*4 6 2
--3 4 5 4 3 2
-1 6 1 7 5 2
-9 9 0 0 8 -3
-8 8 4 4 -3 2  
-*/

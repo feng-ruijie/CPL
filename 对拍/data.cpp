@@ -18,12 +18,12 @@ int read(){
 int main(){
 	struct _timeb T;
 	_ftime(&T);
-	srand(T.millitm);
-	int n = rand() % 15 , m = rand() % 15 , k = rand() % min(n,m);
+	srand(time(0));
+	int n = rand() % 10 , m = rand() % 10 , k = rand() % min(n,m);
 	printf("%d %d %d\n",n,m,k);
 	for(int i=1;i<=n;i++){
 		for(int j=1;j<=m;j++){
-			int x = rand() % 20;
+			int x = rand() % 5;
 			if(rand()%5 == 0) x = -x; 
 			printf("%d ",x);  
 		}
