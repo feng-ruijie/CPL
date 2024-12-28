@@ -19,4 +19,6 @@ int main(){
             printf("%d ",i);
         }
     }
+    free(s);
+    free(t);
 }

@@ -29,4 +29,5 @@ int main(){
         }
     }
     printf("%s",s);
+    free(s);
 }

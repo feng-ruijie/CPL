@@ -67,4 +67,5 @@ int main(){
         }
     }
     printf("%s",s);
+    free(s);free(s1);
 }

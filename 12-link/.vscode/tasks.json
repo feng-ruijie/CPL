@@ -7,8 +7,9 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "${file}",
-                //"${fileDirname}\\*.c",
+                "${fileDirname}\\*.c",//多文件模版
+                "-ID:\\programming\\codes\\12-link\\ll",
+                "D:\\programming\\codes\\12-link\\ll\\ll.c",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
